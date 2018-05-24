@@ -31,6 +31,9 @@ class ViewController: UIViewController {
         
         let base = URL(string: "https://api.darksky.net/forecast/\(darkSkyApiKey)/")
         let forcastUrl = URL(string: "37.8267,-122.4233", relativeTo: base)
+        
+        let weatherData = try! Data(contentsOf: forcastUrl!)
+        print(weatherData as NSData)    
     }
 
     override func didReceiveMemoryWarning() {
