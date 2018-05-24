@@ -33,7 +33,10 @@ class ViewController: UIViewController {
         let forcastUrl = URL(string: "37.8267,-122.4233", relativeTo: base)
         
         let weatherData = try! Data(contentsOf: forcastUrl!)
-        print(weatherData as NSData)    
+        print(weatherData as NSData)
+        
+        let json = try! JSONSerialization.jsonObject(with: weatherData, options: [])
+        print(json)
     }
 
     override func didReceiveMemoryWarning() {
