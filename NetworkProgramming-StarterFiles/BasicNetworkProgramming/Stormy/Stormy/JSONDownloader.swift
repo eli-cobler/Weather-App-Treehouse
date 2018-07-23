@@ -2,28 +2,28 @@
 //  JSONDownloader.swift
 //  Stormy
 //
-//  Created by Eli Cobler on 5/24/18.
+//  Created by Screencast on 5/21/18.
 //  Copyright © 2018 Treehouse. All rights reserved.
 //
 
 import Foundation
 
 class JSONDownloader {
-    
     let session: URLSession
     
-    init(configuation: URLSessionConfiguration) {
-        self.session = URLSession(configuration: configuation)
+    init(configuration: URLSessionConfiguration) {
+        self.session = URLSession(configuration: configuration)
     }
     
     convenience init() {
-        self.init(configuation: .default)
+        self.init(configuration: .default)
     }
     
     typealias JSON = [String: AnyObject]
+    typealias JSONTaskCompletionHandler = (JSON?, DarkSkyError?) -> Void
     
-    func jsonTask(with request: URLRequest, completionHandler completion: @escaping (JSON?, DarkSkyError?) -> Void) -> URLSessionDataTask {
-        let task = session.dataTask(with: request) { data, error, response in
+    func jsonTask(with request: URLRequest, completionHandler completion: @escaping JSONTaskCompletionHandler) -> URLSessionDataTask {
+        let task = session.dataTask(with: request) { data, response, error in
             
             guard let httpResponse = response as? HTTPURLResponse else {
                 completion(nil, .requestFailed)
@@ -42,26 +42,13 @@ class JSONDownloader {
                     completion(nil, .invalidData)
                 }
             } else {
-                completion(nil, .respsonseUnsuccessful(statusCode: httpResponse.statusCode))
+                completion(nil, .responseUnsuccessful(statusCode: httpResponse.statusCode))
             }
         }
         
         return task
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

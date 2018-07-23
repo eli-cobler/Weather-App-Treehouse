@@ -2,7 +2,7 @@
 //  CurrentWeatherViewModel.swift
 //  Stormy
 //
-//  Created by Eli Cobler on 4/26/18.
+//  Created by Screencast on 5/9/18.
 //  Copyright © 2018 Treehouse. All rights reserved.
 //
 
@@ -17,39 +17,19 @@ struct CurrentWeatherViewModel {
     let icon: UIImage
     
     init(model: CurrentWeather) {
-        let roundedTempature = Int(model.temperature)
-        self.temperature = "\(roundedTempature)º"
+        let roundedTemperature = Int(model.temperature)
+        self.temperature = "\(roundedTemperature)º"
         
         let humidityPercentValue = Int(model.humidity * 100)
         self.humidity = "\(humidityPercentValue)%"
         
-        let precipPercentValue = Int(model.precipitationfProbability * 100)
-        self.precipitationProbability = "\(precipPercentValue)%"
+        let precipitationPercentValue = Int(model.precipProbability * 100)
+        self.precipitationProbability = "\(precipitationPercentValue)%"
         
         self.summary = model.summary
-        
-        let weatherIcon = WeatherIcon(iconString: model.icon)
-        self.icon = weatherIcon.image
+        self.icon = model.iconImage
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

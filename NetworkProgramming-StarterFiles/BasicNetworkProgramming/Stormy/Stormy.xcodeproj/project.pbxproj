@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2107010D210572A40036EB32 /* DarkSkyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2107010C210572A40036EB32 /* DarkSkyError.swift */; };
+		2107010F210581980036EB32 /* DarkSkyAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2107010E210581980036EB32 /* DarkSkyAPIClient.swift */; };
+		21070111210582EA0036EB32 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21070110210582EA0036EB32 /* Coordinate.swift */; };
+		21070113210586C20036EB32 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21070112210586C20036EB32 /* Weather.swift */; };
 		2194F69E20B7BB9A0090E267 /* JSONDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2194F69D20B7BB9A0090E267 /* JSONDownloader.swift */; };
 		55D7A69C20927DAE00E87002 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D7A69B20927DAE00E87002 /* CurrentWeather.swift */; };
 		55D7A69E209284B400E87002 /* WeatherIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D7A69D209284B400E87002 /* WeatherIcon.swift */; };
@@ -21,6 +24,9 @@
 
 /* Begin PBXFileReference section */
 		2107010C210572A40036EB32 /* DarkSkyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkSkyError.swift; sourceTree = "<group>"; };
+		2107010E210581980036EB32 /* DarkSkyAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkSkyAPIClient.swift; sourceTree = "<group>"; };
+		21070110210582EA0036EB32 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		21070112210586C20036EB32 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		2194F69D20B7BB9A0090E267 /* JSONDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDownloader.swift; sourceTree = "<group>"; };
 		55D7A69B20927DAE00E87002 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		55D7A69D209284B400E87002 /* WeatherIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherIcon.swift; sourceTree = "<group>"; };
@@ -75,6 +81,9 @@
 				55D7A69F20928B4500E87002 /* CurrentWeatherViewModel.swift */,
 				2194F69D20B7BB9A0090E267 /* JSONDownloader.swift */,
 				2107010C210572A40036EB32 /* DarkSkyError.swift */,
+				2107010E210581980036EB32 /* DarkSkyAPIClient.swift */,
+				21070110210582EA0036EB32 /* Coordinate.swift */,
+				21070112210586C20036EB32 /* Weather.swift */,
 			);
 			path = Stormy;
 			sourceTree = "<group>";
@@ -111,7 +120,7 @@
 				TargetAttributes = {
 					975DC4411E550B8100D92F5B = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = R9E84DX62H;
+						DevelopmentTeam = 24UL79H2G8;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -155,7 +164,10 @@
 				2107010D210572A40036EB32 /* DarkSkyError.swift in Sources */,
 				2194F69E20B7BB9A0090E267 /* JSONDownloader.swift in Sources */,
 				975DC4481E550B8100D92F5B /* ViewController.swift in Sources */,
+				2107010F210581980036EB32 /* DarkSkyAPIClient.swift in Sources */,
+				21070113210586C20036EB32 /* Weather.swift in Sources */,
 				55D7A69E209284B400E87002 /* WeatherIcon.swift in Sources */,
+				21070111210582EA0036EB32 /* Coordinate.swift in Sources */,
 				55D7A6A020928B4500E87002 /* CurrentWeatherViewModel.swift in Sources */,
 				55D7A69C20927DAE00E87002 /* CurrentWeather.swift in Sources */,
 				975DC4461E550B8100D92F5B /* AppDelegate.swift in Sources */,
@@ -279,10 +291,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = R9E84DX62H;
+				DEVELOPMENT_TEAM = 24UL79H2G8;
 				INFOPLIST_FILE = Stormy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.teamtreehouse.Stormy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elicobler.Stormy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -292,10 +304,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = R9E84DX62H;
+				DEVELOPMENT_TEAM = 24UL79H2G8;
 				INFOPLIST_FILE = Stormy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.teamtreehouse.Stormy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.elicobler.Stormy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
