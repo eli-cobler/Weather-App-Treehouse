@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2107010D210572A40036EB32 /* DarkSkyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2107010C210572A40036EB32 /* DarkSkyError.swift */; };
 		2194F69E20B7BB9A0090E267 /* JSONDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2194F69D20B7BB9A0090E267 /* JSONDownloader.swift */; };
 		55D7A69C20927DAE00E87002 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D7A69B20927DAE00E87002 /* CurrentWeather.swift */; };
 		55D7A69E209284B400E87002 /* WeatherIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D7A69D209284B400E87002 /* WeatherIcon.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2107010C210572A40036EB32 /* DarkSkyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkSkyError.swift; sourceTree = "<group>"; };
 		2194F69D20B7BB9A0090E267 /* JSONDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDownloader.swift; sourceTree = "<group>"; };
 		55D7A69B20927DAE00E87002 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		55D7A69D209284B400E87002 /* WeatherIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherIcon.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				55D7A69D209284B400E87002 /* WeatherIcon.swift */,
 				55D7A69F20928B4500E87002 /* CurrentWeatherViewModel.swift */,
 				2194F69D20B7BB9A0090E267 /* JSONDownloader.swift */,
+				2107010C210572A40036EB32 /* DarkSkyError.swift */,
 			);
 			path = Stormy;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2107010D210572A40036EB32 /* DarkSkyError.swift in Sources */,
 				2194F69E20B7BB9A0090E267 /* JSONDownloader.swift in Sources */,
 				975DC4481E550B8100D92F5B /* ViewController.swift in Sources */,
 				55D7A69E209284B400E87002 /* WeatherIcon.swift in Sources */,
