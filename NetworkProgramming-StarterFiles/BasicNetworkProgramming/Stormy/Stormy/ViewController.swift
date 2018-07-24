@@ -48,7 +48,6 @@ class ViewController: UIViewController {
     
     func toogleRefreshAnimation(on: Bool) {
         refreshButton.isHidden = on
-        
         if on {
             activityIndicator.startAnimating()
         } else {
