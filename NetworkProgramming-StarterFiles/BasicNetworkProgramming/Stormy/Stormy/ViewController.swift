@@ -22,12 +22,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        client.getCurrentWeather(at: Coordinate.alcatrazIsland) { [unowned self] currentWeather, error in
-            if let currentWeather = currentWeather {
-                let viewModel = CurrentWeatherViewModel(model: currentWeather)
-                self.displayWeather(using: viewModel)
-            }
-        }
+        getCurrentWeather()
         
     }
     
@@ -37,6 +32,28 @@ class ViewController: UIViewController {
         currentPrecipitationLabel.text = viewModel.precipitationProbability
         currentSummaryLabel.text = viewModel.summary
         currentWeatherIcon.image = viewModel.icon
+    }
+    
+    
+    @IBAction func getCurrentWeather() {
+        toogleRefreshAnimation(on: true)
+        client.getCurrentWeather(at: Coordinate.alcatrazIsland) { [unowned self] currentWeather, error in
+            if let currentWeather = currentWeather {
+                let viewModel = CurrentWeatherViewModel(model: currentWeather)
+                self.displayWeather(using: viewModel)
+                self.toogleRefreshAnimation(on: false)
+            }
+        }
+    }
+    
+    func toogleRefreshAnimation(on: Bool) {
+        refreshButton.isHidden = on
+        
+        if on {
+            activityIndicator.startAnimating()
+        } else {
+            activityIndicator.stopAnimating()
+        }
     }
 }
 
